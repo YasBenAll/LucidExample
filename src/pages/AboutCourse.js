@@ -1,39 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import PaypalDialog from '../components/PaypalDialog';
-import { useAuth } from "../contexts/AuthContext";
-import { db } from "../firebase"; 
-import { doc, getDoc, collection, query, where } from "firebase/firestore";
 
 export default function Course() {
-  const [Paid, setPaid] = useState(false);
-  const { currentUser} = useAuth();
-  const fetchTransaction=async()=>{
-    if(currentUser){
-      try{
-      const response=db.collection('transactions').where('uid', '==', currentUser.uid);
-      const data=await response.get();
-
-      if (data.docs[0].data().status === "COMPLETED") {
-        setPaid(true);
-      }
-      }
-      catch (error) {
-        console.error(error);
-      }
-    }
-
-  }
-
-  useEffect(() => {
-    fetchTransaction();
-  }, [])
-
-
 
   var CourseButton = () => {
-    if(Paid){
       return(
       <>
                         <Button 
@@ -48,13 +19,6 @@ export default function Course() {
       </>
       )
     }
-    else{ 
-      return(
-        <PaypalDialog/>
-      )
-    }
-
-  }
 
   // if(Paid) {
   //   CourseButton = () => {
