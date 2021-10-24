@@ -15,22 +15,6 @@ function DarkFooter() {
             <li>
             © {new Date().getFullYear()}, Powered by Lucid Trading
             </li>
-            <li> 
-              <a
-                href="https://www.creative-tim.com?ref=nukr-dark-footer"
-                target="_blank"
-              >
-                Terms of Service
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://presentation.creative-tim.com?ref=nukr-dark-footer"
-                target="_blank"
-              >
-                Privacy Policy
-              </a>
-            </li>
           </ul>
         </nav>
 

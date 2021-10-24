@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import { Helmet } from 'react-helmet';
-import { About, AboutCourse, Course, CourseRoute, Dashboard, ForgotPassword, Home, Login, PrivateRoute, Signup, UpdateProfile } from './pages'
+import { Articles, AboutCourse, Course, CourseRoute, Dashboard, ForgotPassword, Home, Login, PrivateRoute, Signup, UpdateProfile } from './pages'
 import { Header, Footer } from './components';
 import { useAuth } from './contexts/AuthContext';
 import { db } from "./firebase"; 
@@ -59,33 +59,15 @@ function App() {
         <br></br>
         <br></br>
         <br></br>
-{/* 
-        {RouterCourse()} */}
         <AppContext.Provider value={Paid}>
         <Router>
           <Header/>
           <AnimatePresence exitBeforeEnter> 
           <Switch>
           <Route exact path="/" component={Home}/>
-            <PrivateRoute exact path = "/dashboard" component={Dashboard} />
-            <PrivateRoute exact path = "/update-profile" component={UpdateProfile} />
-
-            <Route path="/course" render={() => {
-              if(Paid) {
-                return <Course />
-              } else {
-                return <Redirect to="/about-course" />
-              }
-            }} />
-
-
-
-            <Route path="/about" exact component={About} />
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={Signup}/>
-            <Route path="/forgot-password" component={ForgotPassword}/>
-           
-            <Route exact path="/about-course" component={AboutCourse}/>
+          <PrivateRoute exact path = "/dashboard" component={Dashboard} />
+          <Route path="/news" exact component={Articles} />
+          <Route exact path="/course" component={AboutCourse}/>
           </Switch>
           </AnimatePresence>
         </Router> 

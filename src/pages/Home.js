@@ -129,10 +129,10 @@ export default function About() {
                     target="_top"
                     to="/about-course"
                     tag={Link}
+                    disabled={true}
                     >
-                    View Course
+                    Coming soon
                   </Button>
-                  <p>$300</p>
                 </div>
               </Col>
             </Row>

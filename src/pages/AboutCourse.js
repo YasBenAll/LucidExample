@@ -41,8 +41,9 @@ export default function Course() {
                     type="button"
                     to="/course"
                     tag={Link}
+                    disabled={true}
                     >
-                    Resume Course
+                    Coming soon
                   </Button>
       </>
       )
@@ -124,7 +125,6 @@ export default function Course() {
                   </p>
               
                   {CourseButton()}
-                  <p>€300</p>
                 </div>
               </Col>
             </Row>

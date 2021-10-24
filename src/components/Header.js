@@ -170,16 +170,16 @@ export default function Header() {
       <div>
         <Button
             {...{
-              key: "About",
+              key: "News",
               color: "inherit",
-              to: "/about",
+              to: "/news",
               component: Link,
               className: menuButton,
               float: "right",
               marginLeft: 5,
             }}
           >
-           About
+           News
         </Button>
         <Button
             {...{
@@ -188,12 +188,13 @@ export default function Header() {
               to: "/course",
               component: Link,
               className: menuButton,
+              
             }}
           >
-           Course
+           Courses
         </Button>
-        {accountButton()}
-        {loginButton()}
+        {/* {accountButton()} */}
+        {/* {loginButton()} */}
       </div></Toolbar>
     );
   };
