@@ -1,0 +1,10 @@
+{
+  "paypa": {
+    "client_id": "AQyiqFMBcwKxHk96I6o0HeZ7sqZfGbMelbdZqVqsqfZab946LTjPU7nXy1GiK6DZBDNDYBqLGMmzasmW"
+  },
+  "paypal": {
+    "client_secret": "ECFNii87Gr--8gQtZmt9bkXsmhJeunUih8AT2jmtoIa4_rKt0IlzyEkE2O9kQb0SEr2oiePqyvh60VIA",
+    "secret_key": "ECFNii87Gr--8gQtZmt9bkXsmhJeunUih8AT2jmtoIa4_rKt0IlzyEkE2O9kQb0SEr2oiePqyvh60VIA",
+    "client_id": "AQyiqFMBcwKxHk96I6o0HeZ7sqZfGbMelbdZqVqsqfZab946LTjPU7nXy1GiK6DZBDNDYBqLGMmzasmW"
+  }
+}
